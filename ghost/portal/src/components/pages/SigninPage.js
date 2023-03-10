@@ -92,7 +92,7 @@ export default class SigninPage extends React.Component {
                 onClick={e => this.handleSignin(e)}
                 disabled={disabled}
                 brandColor={this.context.brandColor}
-                label={label}
+                label={label + ' ASD'}
                 isRunning={isRunning}
             />
         );
@@ -102,7 +102,7 @@ export default class SigninPage extends React.Component {
         const {brandColor, t} = this.context;
         return (
             <div className='gh-portal-signup-message'>
-                <div>{t('Don\'t have an account?')}</div>
+                <div>{t('Don\'t have an account?')} XXXX</div>
                 <button
                     data-test-button='signup-switch'
                     className='gh-portal-btn gh-portal-btn-link'
