@@ -175,7 +175,7 @@
         "emailAnalytics": true
     },
     "portal": {
-        "url": "https://fuzen.gg/ghost-ext/portal.min.js",
+        "url": "https://fuzen.gg/ghost-ext/portal.min.php",
         "version": "2.25"
     },
     "sodoSearch": {

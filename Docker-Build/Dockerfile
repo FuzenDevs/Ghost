@@ -13,7 +13,7 @@ RUN apk add --no-cache \
 # Clonar repo
 RUN set -eux; \
 	apk add --no-cache git; \
-	git clone https://github.com/Wirlie/Ghost; \
+	git clone https://github.com/FuzenDevs/Ghost; \
 	cd Ghost; \
 	yarn setup; \
 	yarn build; \

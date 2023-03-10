@@ -11,7 +11,7 @@
   En este repositorio se agrega la carpeta Docker-Build con el Dockerfile necesario para poder crear la imagen de docker.
 </p>
 <p>
-  Para ajustar partes de Ghost como por ejemplo el portal, ver el repositorio: https://github.com/FuzenDevs/ghost-blog-es
+  Para ajustar partes de Ghost como por ejemplo el portal, se debe de ajustar el archivo que está en: [ghost/core/core/shared/config/defaults.json]
 </p>
 
 <p align="center">
