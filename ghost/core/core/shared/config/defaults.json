@@ -184,8 +184,8 @@
         "version": "1.1"
     },
     "comments": {
-        "url": "https://cdn.jsdelivr.net/ghost/comments-ui@~{version}/umd/comments-ui.min.jsxx",
-        "styles": "https://cdn.jsdelivr.net/ghost/comments-ui@~{version}/umd/main.css",
+        "url": "https://fuzen.gg/ghost-ext/comments-ui.min.php",
+        "styles": "https://fuzen.gg/ghost-ext/comments-ui.main.styles.php",
         "version": "0.12"
     },
     "editor": {
