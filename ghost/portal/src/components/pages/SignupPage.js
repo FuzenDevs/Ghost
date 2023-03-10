@@ -473,7 +473,7 @@ class SignupPage extends React.Component {
             <div>
                 {this.renderFreeTrialMessage()}
                 <div className='gh-portal-signup-message'>
-                    <div>{t('Already a member?')}</div>
+                    <div>{t('Already a member?')}</div> 
                     <button
                         data-test-button='signin-switch'
                         className='gh-portal-btn gh-portal-btn-link'
