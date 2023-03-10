@@ -175,7 +175,7 @@
         "emailAnalytics": true
     },
     "portal": {
-        "url": "https://cdn.jsdelivr.net/ghost/portal@~{version}/umd/portal.min.jsxx",
+        "url": "https://raw.githubusercontent.com/FuzenDevs/ghost-blog-es/master/portal.min.js",
         "version": "2.25"
     },
     "sodoSearch": {
