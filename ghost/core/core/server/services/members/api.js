@@ -58,16 +58,16 @@ function createApiInstance(config) {
                 const siteTitle = settingsCache.get('title');
                 switch (type) {
                 case 'subscribe':
-                    return `📫 Confirm your subscription to ${siteTitle}`;
+                    return `📫 Confirma tu suscripción en ${siteTitle}`;
                 case 'signup':
-                    return `🙌 Complete your sign up to ${siteTitle}!`;
+                    return `🙌 Completa tu registro en ${siteTitle}!`;
                 case 'signup-paid':
-                    return `🙌 Thank you for signing up to ${siteTitle}!`;
+                    return `🙌 Gracias por registrarte en ${siteTitle}!`;
                 case 'updateEmail':
-                    return `📫 Confirm your email update for ${siteTitle}!`;
+                    return `📫 Confirma tu actualización de correo electrónico para ${siteTitle}!`;
                 case 'signin':
                 default:
-                    return `🔑 Secure sign in link for ${siteTitle}`;
+                    return `🔑 Enlace de inicio de sesión seguro para ${siteTitle}`;
                 }
             },
             getText(url, type, email) {
