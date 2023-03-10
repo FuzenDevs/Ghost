@@ -1,4 +1,19 @@
 &nbsp;
+
+<h3>Instrucciones para Fuzen:</h3>
+<p>
+  De acuerdo a las instrucciones oficiales de Ghost (Ver: https://ghost.org/docs/install/source/) se debe de usar <code>yarn setup</code> y <code>yarn build</code> para generar un archivo .tgz que contiene la instalación de Ghost.
+</p>
+<p>
+  Una vez que se tiene el archivo .tgz se puede usar el comando <code>ghost install --archive=[archivo.tgz]</code> para instalar nuestra instalación propia.
+</p>
+<p>
+  En este repositorio se agrega la carpeta Docker-Build con el Dockerfile necesario para poder crear la imagen de docker.
+</p>
+<p>
+  Para ajustar partes de Ghost como por ejemplo el portal, ver el repositorio: https://github.com/FuzenDevs/ghost-blog-es
+</p>
+
 <p align="center">
   <a href="https://ghost.org/#gh-light-mode-only" target="_blank">
     <img src="https://user-images.githubusercontent.com/65487235/157884383-1b75feb1-45d8-4430-b636-3f7e06577347.png" alt="Ghost" width="200px">
