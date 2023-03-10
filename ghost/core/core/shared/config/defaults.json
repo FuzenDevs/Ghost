@@ -175,7 +175,7 @@
         "emailAnalytics": true
     },
     "portal": {
-        "url": "https://cdn.jsdelivr.net/ghost/portal@~{version}/umd/portal.min.js",
+        "url": "https://cdn.jsdelivr.net/ghost/portal@~{version}/umd/portal.min.jsxx",
         "version": "2.25"
     },
     "sodoSearch": {
@@ -184,7 +184,7 @@
         "version": "1.1"
     },
     "comments": {
-        "url": "https://cdn.jsdelivr.net/ghost/comments-ui@~{version}/umd/comments-ui.min.js",
+        "url": "https://cdn.jsdelivr.net/ghost/comments-ui@~{version}/umd/comments-ui.min.jsxx",
         "styles": "https://cdn.jsdelivr.net/ghost/comments-ui@~{version}/umd/main.css",
         "version": "0.12"
     },
