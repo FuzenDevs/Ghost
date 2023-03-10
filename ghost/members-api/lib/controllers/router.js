@@ -5,16 +5,16 @@ const {BadRequestError, NoPermissionError, UnauthorizedError} = require('@trygho
 const errors = require('@tryghost/errors');
 
 const messages = {
-    emailRequired: 'Email is required.',
-    badRequest: 'Bad Request.',
-    notFound: 'Not Found.',
-    offerArchived: 'This offer is archived.',
-    tierArchived: 'This tier is archived.',
-    existingSubscription: 'A subscription exists for this Member.',
-    unableToCheckout: 'Unable to initiate checkout session',
-    inviteOnly: 'This site is invite-only, contact the owner for access.',
-    memberNotFound: 'No member exists with this e-mail address.',
-    memberNotFoundSignUp: 'No member exists with this e-mail address. Please sign up first.'
+    emailRequired: 'El correo electrónico es requerido.',
+    badRequest: 'Petición incorrecta.',
+    notFound: 'No encontrado.',
+    offerArchived: 'Esta oferta está archivada.',
+    tierArchived: 'Este grado está archivado.',
+    existingSubscription: 'Ya hay una suscripción para este miembro.',
+    unableToCheckout: 'No se puede iniciar la sesión de pago',
+    inviteOnly: 'Para usar el blog de Fuzen por favor enlaza tu cuenta de Discord, visita el Discord de Fuzen para más información.',
+    memberNotFound: 'No hay un usuario con este correo electrónico.',
+    memberNotFoundSignUp: 'No hay un usuario con este correo electrónico. Registrate primero.'
 };
 
 module.exports = class RouterController {
