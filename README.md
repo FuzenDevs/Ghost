@@ -13,6 +13,12 @@
 <p>
   Para ajustar partes de Ghost como por ejemplo el portal, se debe de ajustar el archivo que está en: [ghost/core/core/shared/config/defaults.json]
 </p>
+<p>
+  El portal de Ghost se encuentra dentro de este repositorio [ghost/portal], para generar el archivo portal.min.js es necesario ejecutar el comando yarn build desde la carpeta [ghost/portal], no desde la carpeta root. El archivo js del build se coloca en la carpeta [ghost/portal/umd] y ese es el que hay que colocar en la URL de [ghost/core/core/shared/config/defaults.json].
+</p>
+<p>
+  La parte de los comentarios de Ghost es similar al portal, pero no está dentro de este repositorio, consultar el repositorio "Ghost-Comentarios" de FuzenDevs.
+</p>
 
 <p align="center">
   <a href="https://ghost.org/#gh-light-mode-only" target="_blank">
