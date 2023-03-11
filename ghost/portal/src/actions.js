@@ -70,7 +70,7 @@ async function signout({api, state}) {
             action: 'signout:failed',
             popupNotification: createPopupNotification({
                 type: 'signout:failed', autoHide: false, closeable: true, state, status: 'error',
-                message: 'Failed to log out, please try again'
+                message: 'Error al cerrar sesión, inténtalo de nuevo'
             })
         };
     }
@@ -88,7 +88,7 @@ async function signin({data, api, state}) {
             action: 'signin:failed',
             popupNotification: createPopupNotification({
                 type: 'signin:failed', autoHide: false, closeable: true, state, status: 'error',
-                message: HumanReadableError.getMessageFromError(e, 'Failed to log in, please try again')
+                message: HumanReadableError.getMessageFromError(e, 'Error al iniciar sesión, inténtalo de nuevo')
             })
         };
     }
@@ -115,7 +115,7 @@ async function signup({data, state, api}) {
             lastPage: 'signup'
         };
     } catch (e) {
-        const message = e?.message || 'Failed to sign up, please try again';
+        const message = e?.message || 'Error al registrar, inténtalo de nuevo';
         return {
             action: 'signup:failed',
             popupNotification: createPopupNotification({
@@ -146,7 +146,7 @@ async function checkoutPlan({data, state, api}) {
             action: 'checkoutPlan:failed',
             popupNotification: createPopupNotification({
                 type: 'checkoutPlan:failed', autoHide: false, closeable: true, state, status: 'error',
-                message: 'Failed to process checkout, please try again'
+                message: 'Error al procesar el pago, inténtalo de nuevo'
             })
         };
     }
@@ -171,7 +171,7 @@ async function updateSubscription({data, state, api}) {
             action,
             popupNotification: createPopupNotification({
                 type: action, autoHide: true, closeable: true, state, status: 'success',
-                message: 'Subscription plan updated successfully'
+                message: 'Se actualizó el plan de suscripción correctamente'
             }),
             page: 'accountHome',
             member: member
@@ -181,7 +181,7 @@ async function updateSubscription({data, state, api}) {
             action: 'updateSubscription:failed',
             popupNotification: createPopupNotification({
                 type: 'updateSubscription:failed', autoHide: false, closeable: true, state, status: 'error',
-                message: 'Failed to update subscription, please try again'
+                message: 'Error al actualizar suscripción, inténtalo de nuevo'
             })
         };
     }
@@ -205,7 +205,7 @@ async function cancelSubscription({data, state, api}) {
             action: 'cancelSubscription:failed',
             popupNotification: createPopupNotification({
                 type: 'cancelSubscription:failed', autoHide: false, closeable: true, state, status: 'error',
-                message: 'Failed to cancel subscription, please try again'
+                message: 'Error al cancelar suscripción, inténtalo de nuevo'
             })
         };
     }
@@ -229,7 +229,7 @@ async function continueSubscription({data, state, api}) {
             action: 'continueSubscription:failed',
             popupNotification: createPopupNotification({
                 type: 'continueSubscription:failed', autoHide: false, closeable: true, state, status: 'error',
-                message: 'Failed to cancel subscription, please try again'
+                message: 'Error al cancelar suscripción, inténtalo de nuevo'
             })
         };
     }
@@ -243,7 +243,7 @@ async function editBilling({data, state, api}) {
             action: 'editBilling:failed',
             popupNotification: createPopupNotification({
                 type: 'editBilling:failed', autoHide: false, closeable: true, state, status: 'error',
-                message: 'Failed to update billing information, please try again'
+                message: 'Error al actualizar información de pago, inténtalo de nuevo'
             })
         };
     }
@@ -295,7 +295,7 @@ async function updateNewsletterPreference({data, state, api}) {
             popupNotification: createPopupNotification({
                 type: 'updateNewsletter:failed',
                 autoHide: true, closeable: true, state, status: 'error',
-                message: 'Failed to update newsletter settings'
+                message: 'Error al actualizar los ajustes del boletín informativo'
             })
         };
     }
@@ -309,7 +309,7 @@ async function removeEmailFromSuppressionList({state, api}) {
             action,
             popupNotification: createPopupNotification({
                 type: 'removeEmailFromSuppressionList:success', autoHide: true, closeable: true, state, status: 'success',
-                message: 'You have been successfully resubscribed'
+                message: 'Te re-suscribiste correctamente'
             })
         };
     } catch (e) {
@@ -318,7 +318,7 @@ async function removeEmailFromSuppressionList({state, api}) {
             popupNotification: createPopupNotification({
                 type: 'removeEmailFromSuppressionList:failed',
                 autoHide: true, closeable: true, state, status: 'error',
-                message: 'Your email has failed to resubscribe, please try again'
+                message: 'Hubo un error al re-suscribirte, inténtalo de nuevo'
             })
         };
     }
@@ -329,7 +329,7 @@ async function updateNewsletter({data, state, api}) {
         const {subscribed} = data;
         const member = await api.member.update({subscribed});
         if (!member) {
-            throw new Error('Failed to update newsletter');
+            throw new Error('Error al actualizar el boletín informativo');
         }
         const action = 'updateNewsletter:success';
         return {
@@ -337,7 +337,7 @@ async function updateNewsletter({data, state, api}) {
             member: member,
             popupNotification: createPopupNotification({
                 type: action, autoHide: true, closeable: true, state, status: 'success',
-                message: 'Email newsletter settings updated'
+                message: 'Se actualizó la configuración del boletín informativo por correo electrónico'
             })
         };
     } catch (e) {
@@ -345,7 +345,7 @@ async function updateNewsletter({data, state, api}) {
             action: 'updateNewsletter:failed',
             popupNotification: createPopupNotification({
                 type: 'updateNewsletter:failed', autoHide: true, closeable: true, state, status: 'error',
-                message: 'Failed to update newsletter settings'
+                message: 'Error al actualizar la configuración del boletín informativo'
             })
         };
     }
@@ -377,7 +377,7 @@ async function updateMemberData({data, state, api}) {
         try {
             const member = await api.member.update({name});
             if (!member) {
-                throw new Error('Failed to update member');
+                throw new Error('Error al actualizar usuario');
             }
             return {
                 member,
@@ -426,11 +426,11 @@ async function updateProfile({data, state, api}) {
                 page: 'accountHome',
                 popupNotification: createPopupNotification({
                     type: 'updateProfile:success', autoHide: true, closeable: true, status: 'success', state,
-                    message: 'Check your inbox to verify email update'
+                    message: 'Revisa tu bandeja de entrada para verificar tu correo electrónico'
                 })
             };
         }
-        const message = !dataUpdate.success ? 'Failed to update account data' : 'Failed to send verification email';
+        const message = !dataUpdate.success ? 'Error al actualizar los datos de la cuenta' : 'Error al enviar correo de verificación';
 
         return {
             action: 'updateProfile:failed',
@@ -442,7 +442,7 @@ async function updateProfile({data, state, api}) {
     } else if (dataUpdate) {
         const action = dataUpdate.success ? 'updateProfile:success' : 'updateProfile:failed';
         const status = dataUpdate.success ? 'success' : 'error';
-        const message = !dataUpdate.success ? 'Failed to update account details' : 'Account details updated successfully';
+        const message = !dataUpdate.success ? 'Error al actualizar los datos de la cuenta' : 'Los detalles de tu cuenta se actualizaron correctamente';
         return {
             action,
             ...(dataUpdate.success ? {member: dataUpdate.member} : {}),
@@ -454,7 +454,7 @@ async function updateProfile({data, state, api}) {
     } else if (emailUpdate) {
         const action = emailUpdate.success ? 'updateProfile:success' : 'updateProfile:failed';
         const status = emailUpdate.success ? 'success' : 'error';
-        const message = !emailUpdate.success ? 'Failed to send verification email' : 'Check your inbox to verify email update';
+        const message = !emailUpdate.success ? 'Falló el envío del correo de verificación' : 'Revisa tu bandeja de entrada para verificar tu correo electrónico';
         return {
             action,
             ...(emailUpdate.success ? {page: 'accountHome'} : {}),
@@ -468,7 +468,7 @@ async function updateProfile({data, state, api}) {
         page: 'accountHome',
         popupNotification: createPopupNotification({
             type: 'updateProfile:success', autoHide: true, closeable: true, status: 'success', state,
-            message: 'Account details updated successfully'
+            message: 'Los detalles de tu cuenta se actualizaron correctamente'
         })
     };
 }
