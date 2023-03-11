@@ -1,8 +1,8 @@
 export default function readingTime({wordCount, imageCount}) {
     let wordsPerMinute = 275;
     let wordsPerSecond = wordsPerMinute / 60;
-    let minute = '1 min read';
-    let minutes = '% min read';
+    let minute = '1 minuto de lectura';
+    let minutes = '% minutos de lectura';
 
     let readingTimeSeconds = wordCount / wordsPerSecond;
 

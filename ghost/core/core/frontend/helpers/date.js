@@ -46,7 +46,9 @@ module.exports = function (...attrs) {
     // Documentation: http://momentjs.com/docs/#/i18n/
     // Locales: https://github.com/moment/moment/tree/develop/locale
     if (locale && locale.match('^[^/\\\\]*$') !== null) {
-        dateMoment.locale(locale);
+        dateMoment.locale('es-mx');
+    } else {
+        dateMoment.locale('es-mx');
     }
 
     if (timeago) {

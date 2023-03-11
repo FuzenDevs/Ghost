@@ -32,7 +32,7 @@ const AccountActions = () => {
                         className='gh-portal-btn gh-portal-btn-list'
                         onClick={e => openEditProfile(e)}
                     >
-                        Edit
+                        Editar
                     </button>
                 </section>
 
