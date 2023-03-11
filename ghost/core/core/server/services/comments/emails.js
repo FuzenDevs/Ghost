@@ -28,9 +28,9 @@ class CommentsServiceEmails {
             }
 
             const to = author.get('email');
-            const subject = '💬 New comment on your post: ' + post.get('title');
+            const subject = '💬 Nuevo comentario en tu publicación: ' + post.get('title');
 
-            const memberName = member.get('name') || 'Anonymous';
+            const memberName = member.get('name') || 'Anónimo';
 
             const templateData = {
                 siteTitle: this.settingsCache.get('title'),
